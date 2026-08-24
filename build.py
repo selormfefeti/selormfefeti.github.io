@@ -9,8 +9,14 @@ Change SITE below once the domain is registered, then re-run.
 """
 import io, os, re, shutil, urllib.parse
 
-SITE   = "https://selormfefeti.com"         # <- update after registering
-DOMAIN = "selormfefeti.com"                 # written to docs/CNAME for GitHub Pages
+# --- where the site will live -------------------------------------------
+# Leave DOMAIN empty to publish free on github.io. Set it once you own a
+# domain, re-run, and the CNAME plus every absolute URL updates together.
+GH_USER = "YOUR-GITHUB-USERNAME"
+GH_REPO = "portfolio"
+DOMAIN  = ""                                 # e.g. "selormfefeti.com"
+
+SITE  = f"https://{DOMAIN}" if DOMAIN else f"https://{GH_USER}.github.io/{GH_REPO}"
 TITLE = "Selorm Fefeti"
 DESC  = ("Product Manager, ten years across AI, FinServ, and compliance platforms. "
          "Case studies on audit trail, enterprise self-service, and a data model rebuild.")
@@ -62,9 +68,12 @@ def main():
         if os.path.exists(src):
             shutil.copy2(src, os.path.join(DIST, asset))
             print(f"  docs/{asset}")
-    # GitHub Pages reads the custom domain from this file
-    io.open(os.path.join(DIST, "CNAME"), "w", encoding="utf-8").write(DOMAIN + "\n")
-    print(f"  docs/CNAME -> {DOMAIN}")
+    cname = os.path.join(DIST, "CNAME")
+    if DOMAIN:
+        io.open(cname, "w", encoding="utf-8").write(DOMAIN + "\n")
+        print(f"  docs/CNAME -> {DOMAIN}")
+    elif os.path.exists(cname):
+        os.remove(cname)          # a stale CNAME would break the github.io URL
     print(f"  docs/index.html  {len(out):,} bytes")
     print(f"  canonical        {SITE}")
 
