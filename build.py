@@ -13,10 +13,15 @@ import io, os, re, shutil, urllib.parse
 # Leave DOMAIN empty to publish free on github.io. Set it once you own a
 # domain, re-run, and the CNAME plus every absolute URL updates together.
 GH_USER = "YOUR-GITHUB-USERNAME"
-GH_REPO = "portfolio"
+GH_REPO = "YOUR-GITHUB-USERNAME.github.io"   # user site -> shortest URL
 DOMAIN  = ""                                 # e.g. "selormfefeti.com"
 
-SITE  = f"https://{DOMAIN}" if DOMAIN else f"https://{GH_USER}.github.io/{GH_REPO}"
+if DOMAIN:                                        # custom domain, served at the apex
+    SITE = f"https://{DOMAIN}"
+elif GH_REPO.lower() == f"{GH_USER.lower()}.github.io":   # user site, served at the root
+    SITE = f"https://{GH_REPO}"
+else:                                             # project site, served under a path
+    SITE = f"https://{GH_USER}.github.io/{GH_REPO}"
 TITLE = "Selorm Fefeti"
 DESC  = ("Product Manager, ten years across AI, FinServ, and compliance platforms. "
          "Case studies on audit trail, enterprise self-service, and a data model rebuild.")
