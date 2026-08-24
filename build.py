@@ -12,8 +12,8 @@ import io, os, re, shutil, urllib.parse
 # --- where the site will live -------------------------------------------
 # Leave DOMAIN empty to publish free on github.io. Set it once you own a
 # domain, re-run, and the CNAME plus every absolute URL updates together.
-GH_USER = "YOUR-GITHUB-USERNAME"
-GH_REPO = "YOUR-GITHUB-USERNAME.github.io"   # user site -> shortest URL
+GH_USER = "selormfefeti"
+GH_REPO = "selormfefeti.github.io"           # user site -> shortest URL
 DOMAIN  = ""                                 # e.g. "selormfefeti.com"
 
 if DOMAIN:                                        # custom domain, served at the apex
