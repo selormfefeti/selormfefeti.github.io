@@ -68,7 +68,7 @@ def main():
     os.makedirs(DIST, exist_ok=True)
     out = f"<!doctype html>\n<html lang=\"en\">\n<head>\n{head}\n</head>\n<body>\n{body}\n</body>\n</html>\n"
     io.open(os.path.join(DIST, "index.html"), "w", encoding="utf-8").write(out)
-    for asset in ("og.png", "Selorm-Fefeti-Product-Portfolio.pdf"):
+    for asset in ("og.png", "Selorm-Fefeti-Product-Portfolio.pdf", "Selorm-Fefeti-Resume.pdf"):
         src = os.path.join(HERE, asset)
         if os.path.exists(src):
             shutil.copy2(src, os.path.join(DIST, asset))
