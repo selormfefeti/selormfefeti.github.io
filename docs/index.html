@@ -1,0 +1,899 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Selorm Fefeti</title>
+<meta name="description" content="Product Manager, ten years across AI, FinServ, and compliance platforms. Case studies on audit trail, enterprise self-service, and a data model rebuild.">
+<meta name="author" content="Selorm Fefeti">
+<link rel="canonical" href="https://selormfefeti.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%226%22%20fill%3D%22%238C2F2A%22%2F%3E%3Ctext%20x%3D%2216%22%20y%3D%2223%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2219%22%20fill%3D%22%23F6F7F9%22%20text-anchor%3D%22middle%22%3ES%3C%2Ftext%3E%3C%2Fsvg%3E">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Selorm Fefeti">
+<meta property="og:url" content="https://selormfefeti.com/">
+<meta property="og:title" content="Selorm Fefeti - Product Manager">
+<meta property="og:description" content="Product Manager, ten years across AI, FinServ, and compliance platforms. Case studies on audit trail, enterprise self-service, and a data model rebuild.">
+<meta property="og:image" content="https://selormfefeti.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Selorm Fefeti, Product Manager">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Selorm Fefeti - Product Manager">
+<meta name="twitter:description" content="Product Manager, ten years across AI, FinServ, and compliance platforms. Case studies on audit trail, enterprise self-service, and a data model rebuild.">
+<meta name="twitter:image" content="https://selormfefeti.com/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,400;0,500;1,6..72,300;1,400&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+:root{
+  --paper:#F6F7F9;
+  --surface:#FFFFFF;
+  --ink:#14181F;
+  --ink-2:#4A5462;
+  --ink-3:#78838F;
+  --rule:#DDE1E7;
+  --rule-strong:#C3CAD3;
+  --accent:#8C2F2A;
+  --accent-edge:rgba(140,47,42,.28);
+  --focus:#8C2F2A;
+
+  --f-display:"Newsreader",Georgia,"Times New Roman",serif;
+  --f-body:"Public Sans","Helvetica Neue",Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+
+  --measure:64ch;
+  --rail:190px;
+}
+
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#101318;
+    --surface:#161A21;
+    --ink:#E8EBEF;
+    --ink-2:#A9B2BE;
+    --ink-3:#7A8492;
+    --rule:#262C35;
+    --rule-strong:#39414C;
+    --accent:#E0776C;
+    --accent-edge:rgba(224,119,108,.32);
+    --focus:#E0776C;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#101318;
+  --surface:#161A21;
+  --ink:#E8EBEF;
+  --ink-2:#A9B2BE;
+  --ink-3:#7A8492;
+  --rule:#262C35;
+  --rule-strong:#39414C;
+  --accent:#E0776C;
+  --accent-edge:rgba(224,119,108,.32);
+  --focus:#E0776C;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--f-body);
+  font-weight:400;
+  font-size:16.5px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  font-synthesis-weight:none;
+}
+
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-edge);padding-bottom:1px}
+a:hover{border-bottom-color:var(--accent)}
+a:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:2px}
+
+/* ---------- shell ---------- */
+.shell{
+  max-width:1120px;
+  margin:0 auto;
+  padding:0 28px 120px;
+  display:grid;
+  grid-template-columns:var(--rail) minmax(0,1fr);
+  column-gap:56px;
+  align-items:start;
+}
+
+/* ---------- left rail ---------- */
+.rail{
+  position:sticky;
+  top:0;
+  padding-top:64px;
+  display:flex;
+  flex-direction:column;
+  gap:26px;
+  font-family:var(--f-mono);
+  font-size:11.5px;
+  letter-spacing:.05em;
+}
+.rail-head{
+  color:var(--ink-3);
+  text-transform:uppercase;
+  padding-bottom:9px;
+  border-bottom:1px solid var(--rule);
+}
+.rail nav{display:flex;flex-direction:column;gap:11px}
+.rail nav a{
+  color:var(--ink-2);
+  border-bottom:none;
+  display:flex;
+  gap:10px;
+  line-height:1.4;
+}
+.rail nav a .n{color:var(--ink-3);font-variant-numeric:tabular-nums}
+.rail nav a:hover{color:var(--accent)}
+.rail-foot{color:var(--ink-3);line-height:1.7;border-top:1px solid var(--rule);padding-top:14px}
+
+/* ---------- main ---------- */
+main{padding-top:64px;min-width:0}
+
+section{
+  padding-top:52px;
+  margin-top:52px;
+  border-top:1px solid var(--rule);
+  scroll-margin-top:24px;
+}
+section:first-child{border-top:none;margin-top:0;padding-top:0}
+
+.eyebrow{
+  font-family:var(--f-mono);
+  font-size:11.5px;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  margin:0 0 18px;
+}
+
+/* ---------- hero ---------- */
+.name{
+  font-family:var(--f-display);
+  font-weight:400;
+  font-size:clamp(2.6rem,6vw,3.9rem);
+  line-height:1.02;
+  letter-spacing:-.018em;
+  margin:0;
+  text-wrap:balance;
+}
+.thesis{
+  font-family:var(--f-display);
+  font-weight:300;
+  font-style:italic;
+  font-size:clamp(1.35rem,3vw,1.72rem);
+  line-height:1.34;
+  color:var(--ink);
+  max-width:26ch;
+  margin:26px 0 0;
+  padding-left:20px;
+  border-left:2px solid var(--accent);
+  text-wrap:balance;
+}
+.closer{
+  font-family:var(--f-display);
+  font-weight:300;
+  font-style:italic;
+  font-size:clamp(1.18rem,2.4vw,1.45rem);
+  line-height:1.38;
+  color:var(--ink);
+  max-width:38ch;
+  margin:38px 0 0;
+  padding-left:20px;
+  border-left:2px solid var(--accent);
+  text-wrap:balance;
+}
+.standfirst{
+  max-width:var(--measure);
+  color:var(--ink-2);
+  margin:26px 0 0;
+}
+.contact{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 22px;
+  margin-top:28px;
+  font-family:var(--f-mono);
+  font-size:12.5px;
+}
+
+/* ---------- headings ---------- */
+h2{
+  font-family:var(--f-display);
+  font-weight:400;
+  font-size:clamp(1.55rem,3vw,1.95rem);
+  line-height:1.18;
+  letter-spacing:-.012em;
+  margin:0 0 20px;
+  text-wrap:balance;
+}
+h3{
+  font-family:var(--f-body);
+  font-weight:600;
+  font-size:12.5px;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  margin:34px 0 10px;
+}
+p{max-width:var(--measure)}
+p+p{margin-top:1em}
+
+/* ---------- ledger ---------- */
+.ledger-wrap{overflow-x:auto}
+table.ledger{
+  width:100%;
+  border-collapse:collapse;
+  font-size:15px;
+  min-width:520px;
+}
+table.ledger th{
+  text-align:left;
+  font-family:var(--f-mono);
+  font-weight:400;
+  font-size:11px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  padding:0 16px 9px 0;
+  border-bottom:1px solid var(--rule-strong);
+}
+table.ledger td{
+  padding:14px 16px 14px 0;
+  border-bottom:1px solid var(--rule);
+  vertical-align:baseline;
+  color:var(--ink-2);
+}
+table.ledger td:first-child{
+  color:var(--ink);
+  font-weight:500;
+  font-variant-numeric:tabular-nums;
+  white-space:nowrap;
+}
+table.ledger td:last-child,table.ledger th:last-child{
+  padding-right:0;
+  font-family:var(--f-mono);
+  font-size:12px;
+  color:var(--ink-3);
+  white-space:nowrap;
+}
+
+/* ---------- case record ---------- */
+.record-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px 14px;
+  font-family:var(--f-mono);
+  font-size:11.5px;
+  letter-spacing:.05em;
+  color:var(--ink-3);
+  margin:0 0 16px;
+  text-transform:uppercase;
+}
+.record-meta span:not(:last-child)::after{content:" \00B7";color:var(--rule-strong);margin-left:14px}
+
+.facts{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  gap:1px;
+  background:var(--rule);
+  border:1px solid var(--rule);
+}
+.facts li{
+  background:var(--surface);
+  padding:13px 16px;
+  display:grid;
+  grid-template-columns:120px minmax(0,1fr);
+  gap:16px;
+  font-size:15px;
+}
+.facts .k{
+  font-family:var(--f-mono);
+  font-size:11px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  padding-top:3px;
+}
+.facts .v{color:var(--ink-2)}
+
+/* ---------- AI use cases ---------- */
+.uses{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1px;
+  background:var(--rule);
+  border:1px solid var(--rule);
+  margin-top:24px;
+  max-width:var(--measure);
+}
+.uses > div{background:var(--surface);padding:18px 20px}
+.uses h4{
+  font-family:var(--f-mono);
+  font-size:10.5px;
+  font-weight:500;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin:0 0 9px;
+}
+.uses p{margin:0;font-size:14.5px;color:var(--ink-2);max-width:none}
+@media (max-width:640px){.uses{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- figure ---------- */
+figure.diagram{
+  margin:26px 0 0;
+  max-width:var(--measure);
+  border:1px solid var(--rule);
+  background:var(--surface);
+  padding:24px 24px 18px;
+}
+figure.diagram svg{
+  display:block;
+  width:100%;
+  height:auto;
+  color:var(--ink-2);
+}
+figure.diagram figcaption{
+  margin-top:18px;
+  padding-top:14px;
+  border-top:1px solid var(--rule);
+  font-size:13.5px;
+  line-height:1.55;
+  color:var(--ink-3);
+}
+@media (max-width:640px){figure.diagram{padding:16px 14px 12px}}
+
+/* ---------- before / after ---------- */
+.shift{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1px;
+  background:var(--rule);
+  border:1px solid var(--rule);
+  margin-top:18px;
+  max-width:var(--measure);
+}
+.shift > div{background:var(--surface);padding:16px 18px}
+.shift .k{
+  font-family:var(--f-mono);
+  font-size:10.5px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  margin:0 0 9px;
+  display:block;
+}
+.shift .after .k{color:var(--accent)}
+.shift p{margin:0;font-size:14.5px;color:var(--ink-2);max-width:none}
+@media (max-width:640px){.shift{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- decisions ---------- */
+.decision{
+  border-left:1px solid var(--rule-strong);
+  padding-left:22px;
+  margin-top:26px;
+  max-width:calc(var(--measure) + 22px);
+}
+.decision .d-label{
+  font-family:var(--f-mono);
+  font-size:11px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin:0 0 9px;
+}
+.decision p{margin:0;font-size:15.5px}
+.decision p+p{margin-top:.8em}
+.decision strong{font-weight:600;color:var(--ink)}
+
+/* ---------- short entries ---------- */
+.entries{display:flex;flex-direction:column;gap:0}
+.entry{
+  padding:22px 0;
+  border-bottom:1px solid var(--rule);
+  display:grid;
+  grid-template-columns:150px minmax(0,1fr);
+  gap:28px;
+}
+.entry:first-child{padding-top:0}
+.entry:last-child{border-bottom:none}
+.entry-side{
+  font-family:var(--f-mono);
+  font-size:11.5px;
+  letter-spacing:.05em;
+  color:var(--ink-3);
+  line-height:1.7;
+  text-transform:uppercase;
+}
+.entry h4{
+  font-family:var(--f-body);
+  font-size:16.5px;
+  font-weight:600;
+  margin:0 0 6px;
+  color:var(--ink);
+}
+.entry p{margin:0;color:var(--ink-2);font-size:15px}
+
+/* ---------- skills ---------- */
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px}
+.cols p{margin:0;color:var(--ink-2);font-size:15px}
+
+footer{
+  margin-top:72px;
+  padding-top:26px;
+  border-top:1px solid var(--rule-strong);
+  font-family:var(--f-mono);
+  font-size:12px;
+  color:var(--ink-3);
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 24px;
+  justify-content:space-between;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:860px){
+  .shell{grid-template-columns:minmax(0,1fr);padding:0 22px 80px}
+  .rail{position:static;padding-top:40px;gap:18px}
+  .rail nav{flex-direction:row;flex-wrap:wrap;gap:8px 20px}
+  .rail nav a .n{display:none}
+  .rail-foot{display:none}
+  main{padding-top:34px}
+  .facts li{grid-template-columns:minmax(0,1fr);gap:4px}
+  .entry{grid-template-columns:minmax(0,1fr);gap:8px}
+  .thesis{max-width:none}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+html{scroll-behavior:smooth}
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <aside class="rail">
+    <p class="rail-head">Index</p>
+    <nav>
+      <a href="#outcomes"><span class="n">01</span><span>Outcomes</span></a>
+      <a href="#audit"><span class="n">02</span><span>Audit trail</span></a>
+      <a href="#portal"><span class="n">03</span><span>Client self-service</span></a>
+      <a href="#datamodel"><span class="n">04</span><span>Data model rebuild</span></a>
+      <a href="#ai"><span class="n">05</span><span>Working with AI</span></a>
+      <a href="#practice"><span class="n">06</span><span>How I work</span></a>
+      <a href="#also"><span class="n">07</span><span>Also shipped</span></a>
+      <a href="#background"><span class="n">08</span><span>Background</span></a>
+    </nav>
+    <p class="rail-foot">Product Manager<br>New York, NY<br>Open to roles</p>
+  </aside>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section>
+      <p class="eyebrow">Product Manager &nbsp;&#183;&nbsp; AI, FinServ, and high-stakes platforms</p>
+      <h1 class="name">Selorm Fefeti</h1>
+      <p class="thesis">I build the systems people have to defend under examination.</p>
+      <p class="standfirst">Ten years building software for firms that operate under supervision, where the product has to satisfy a regulator, a compliance officer, and an end user who never asked for any of it. Four 0-to-1 launches across enterprise and SMB, and $1M+ in cumulative ARR delivered at Intapp, Compliance Solutions Strategies, and Dataminr.</p>
+      <p class="contact">
+        <a href="mailto:selormfefeti@gmail.com">selormfefeti@gmail.com</a>
+        <a href="https://www.linkedin.com/in/selormfefeti/">LinkedIn</a>
+        <span style="color:var(--ink-3)">503&#8202;&#183;&#8202;421&#8202;&#183;&#8202;4381</span>
+      </p>
+    </section>
+
+    <!-- ===== OUTCOMES ===== -->
+    <section id="outcomes">
+      <p class="eyebrow">01 &nbsp;/&nbsp; Record of outcomes</p>
+      <h2>What shipped, and what it was worth.</h2>
+      <div class="ledger-wrap">
+        <table class="ledger">
+          <thead>
+            <tr><th>Result</th><th>Work</th><th>Where</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>30% of client ARR</td>
+              <td>Audit Trail for Read Events &#8212; field-level access tracking for Market Abuse Regulation compliance; flagship capability in the enterprise client solutions suite</td>
+              <td>Intapp</td>
+            </tr>
+            <tr>
+              <td>Weeks to seconds</td>
+              <td>Environment provisioning moved out of an internal fulfillment queue and into a client-facing self-service portal</td>
+              <td>Intapp</td>
+            </tr>
+            <tr>
+              <td>&#8722;50% tickets</td>
+              <td>Native troubleshooting tools for 80+ teams on the global developer platform</td>
+              <td>Intapp</td>
+            </tr>
+            <tr>
+              <td>$500K pipeline</td>
+              <td>20+ qualified demos generated as subject-matter expert at industry events</td>
+              <td>Intapp</td>
+            </tr>
+            <tr>
+              <td>$600K ARR &nbsp;/&nbsp; 35 clients</td>
+              <td>Employee trade monitoring module built 0-to-1 against SEC regulations</td>
+              <td>CSS</td>
+            </tr>
+            <tr>
+              <td>$300K annual revenue</td>
+              <td>Legacy Shares Outstanding product repositioned around a proprietary ML data repository, inside 12 months</td>
+              <td>CSS</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== CASE 1 ===== -->
+    <section id="audit">
+      <p class="eyebrow">02 &nbsp;/&nbsp; Case study</p>
+      <p class="record-meta">
+        <span>Intapp</span><span>2021&#8202;&#8211;&#8202;2026</span><span>Platform Product Manager</span>
+      </p>
+      <h2>From &#8220;we have logs&#8221; to &#8220;we can prove control.&#8221;</h2>
+
+      <ul class="facts">
+        <li><span class="k">Product</span><span class="v">Audit Trail for Read Events &#8212; tracks user interaction with sensitive data down to the object and field level</span></li>
+        <li><span class="k">Role</span><span class="v">Product lead for the enterprise client solutions suite; owned the roadmap</span></li>
+        <li><span class="k">Users</span><span class="v">Compliance officers and administrators at global financial services firms</span></li>
+        <li><span class="k">Driver</span><span class="v">Market Abuse Regulation, including a seven-year retention obligation</span></li>
+        <li><span class="k">Outcome</span><span class="v">Flagship capability in the enterprise compliance suite, which generated 30% of participating client ARR</span></li>
+      </ul>
+
+      <h3>The situation</h3>
+      <p>Compliance officers at financial services firms had transactional logs, but the logs were hard to query. They could see that an event had happened without seeing who accessed which sensitive data, or whether that access fit the person&#8217;s normal pattern.</p>
+      <p>For firms subject to the Market Abuse Regulation, that gap mattered. Insider threats and market abuse surface first as unusual data access, and early detection of it wasn&#8217;t something the existing tooling was built to support. Review happened after the fact. That doesn&#8217;t answer the question a regulator actually asks in an exam: <em>how would you have caught this?</em></p>
+
+      <div class="shift">
+        <div>
+          <span class="k">Before</span>
+          <p>Transactional logs, hard to query. The event was visible. The actor, the field they touched, and whether any of it was normal for them were not. Detection was retrospective.</p>
+        </div>
+        <div class="after">
+          <span class="k">After</span>
+          <p>Field-level visibility into who read what, ranked by deviation from that user&#8217;s normal scope and cadence. Detection moved earlier, and the answer to an examiner became defensible.</p>
+        </div>
+      </div>
+
+      <h3>How I framed it</h3>
+      <p>I worked directly with compliance officers at client firms to pin down what &#8220;suspicious&#8221; means in regulatory terms rather than in the abstract. The answer came back consistent: access that deviates from a user&#8217;s normal scope or cadence. Turning that into requirements engineering could build against was the first job.</p>
+      <p>The second job was the harder one, and it wasn&#8217;t the tracking. It was making the signal usable. Flag everything and compliance officers drown in noise, stop trusting the tool, and fall back to the after-the-fact review we were trying to replace.</p>
+
+      <h3>Decisions and tradeoffs</h3>
+
+      <div class="decision">
+        <div class="d-label">Ranking over coverage</div>
+        <p>Rather than surface everything we could technically see, I prioritized which access patterns mattered most and worked with engineering on how anomalies were surfaced and ranked. Then I iterated against real reviewer behavior: what compliance officers acted on versus what they scrolled past. A signal being ignored is a product verdict, and it was the most honest data we had.</p>
+      </div>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 700 180" role="img" aria-label="Read events flow into a ranking, which surfaces a shortlist to reviewers; what reviewers choose to escalate feeds back and retunes the ranking.">
+          <defs>
+            <marker id="atArrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><polygon points="0,0 8,4 0,8" fill="currentColor"/></marker>
+            <marker id="atArrowA" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><polygon points="0,0 8,4 0,8" fill="var(--accent)"/></marker>
+          </defs>
+
+          <rect x="8" y="44" width="150" height="52" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-opacity="0.4"/>
+          <text x="83" y="68" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="11" letter-spacing="0.8" fill="currentColor">READ EVENTS</text>
+          <text x="83" y="83" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" fill="currentColor" opacity="0.72">object + field level</text>
+          <line x1="158" y1="70" x2="198" y2="70" stroke="currentColor" stroke-opacity="0.55" marker-end="url(#atArrow)"/>
+          <rect x="200" y="44" width="150" height="52" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-opacity="0.4"/>
+          <text x="275" y="68" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="11" letter-spacing="0.8" fill="currentColor">RANKING</text>
+          <text x="275" y="83" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" fill="currentColor" opacity="0.72">scope + cadence</text>
+          <line x1="350" y1="70" x2="390" y2="70" stroke="currentColor" stroke-opacity="0.55" marker-end="url(#atArrow)"/>
+          <rect x="392" y="44" width="126" height="52" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-opacity="0.4"/>
+          <text x="455" y="68" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="11" letter-spacing="0.8" fill="currentColor">SURFACED</text>
+          <text x="455" y="83" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" fill="currentColor" opacity="0.72">ranked shortlist</text>
+          <line x1="518" y1="70" x2="558" y2="70" stroke="currentColor" stroke-opacity="0.55" marker-end="url(#atArrow)"/>
+          <rect x="560" y="44" width="132" height="52" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-opacity="0.4"/>
+          <text x="626" y="68" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="11" letter-spacing="0.8" fill="currentColor">REVIEWER</text>
+          <text x="626" y="83" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" fill="currentColor" opacity="0.72">escalate / dismiss</text>
+
+          <path d="M 626 96 V 128 Q 626 138 616 138 L 285 138 Q 275 138 275 128 V 104" fill="none" stroke="var(--accent)" stroke-width="1.4" marker-end="url(#atArrowA)"/>
+          <text x="450" y="158" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10" letter-spacing="0.4" fill="var(--accent)">what reviewers escalate retunes the ranking</text>
+        </svg>
+        <figcaption>The correction loop. The first ranking was built from the regulation. The version that worked was built from what reviewers actually escalated, so reviewer behavior had to feed back into the ranking.</figcaption>
+      </figure>
+
+      <div class="decision">
+        <div class="d-label">ClickHouse over the conventional database</div>
+        <p>Architecting the data layer, engineering favored a conventional database structure the team already had deep operational experience running. I pushed for ClickHouse instead, on the strength of WORM (write-once-read-many) storage, for three reasons:</p>
+        <p><strong>Regulatory defensibility.</strong> Immutability is the whole point. If the records can be changed, they don&#8217;t prove anything.</p>
+        <p><strong>Query performance at scale.</strong> A compliance officer investigating field-level access across a large client dataset can&#8217;t wait on a slow query mid-investigation. If the query is slow, people stop using it mid-investigation, which is exactly when they need it.</p>
+        <p><strong>Seven-year retention.</strong> The retention period the regulators require set the storage profile, and it wasn&#8217;t one the conventional structure was going to carry well.</p>
+        <p>The cost was real. I was asking the team to take on operational unfamiliarity in exchange for properties the regulation demanded.</p>
+      </div>
+
+      <h3>Result</h3>
+      <p>What shipped moved administrators and compliance officers from &#8220;we have logs&#8221; to &#8220;we can prove control&#8221;: early detection of potential breaches and insider threats, field-level visibility for regulatory audits, and a defensible answer to exactly the kind of question a Market Abuse Regulation exam asks.</p>
+      <p>The sharpest measure of what that was worth isn&#8217;t a percentage. The capability was a condition of a major enterprise deal &#8212; without it, that client wouldn&#8217;t have signed. It went on to become one of the flagship capabilities in the enterprise compliance suite, and the audit trail and activity-tracking work was a major driver behind that suite generating 30% of participating client ARR.</p>
+    </section>
+
+    <!-- ===== CASE 2 ===== -->
+    <section id="portal">
+      <p class="eyebrow">03 &nbsp;/&nbsp; Case study</p>
+      <p class="record-meta">
+        <span>Intapp</span><span>2021&#8202;&#8211;&#8202;2026</span><span>Platform Product Manager</span>
+      </p>
+      <h2>Weeks to seconds, without handing over the keys.</h2>
+
+      <ul class="facts">
+        <li><span class="k">Product</span><span class="v">Client-facing self-service portal for site management and backend operations</span></li>
+        <li><span class="k">Role</span><span class="v">Product lead &#8212; discovery, access model, launch</span></li>
+        <li><span class="k">Users</span><span class="v">Platform administrators, and the security and technology officers who had to approve them</span></li>
+        <li><span class="k">Finding</span><span class="v">The binding requirement was authorization, not speed</span></li>
+        <li><span class="k">Outcome</span><span class="v">Provisioning went from weeks to seconds; hosting overhead became measurable</span></li>
+      </ul>
+
+      <h3>The situation</h3>
+      <p>Platform administrators couldn&#8217;t change their own environments. Standing up a new UAT, sandbox, or production environment, toggling feature availability across production and UAT sites, setting IP restrictions &#8212; every one of these had to be routed through an internal fulfillment process that could take weeks.</p>
+      <p>It was slow and error-prone in both directions. The administrator waited on a change that should have been straightforward, and the request travelled through hands with no context on why it was being made. Every client added to the queue made the bottleneck worse.</p>
+
+      <div class="shift">
+        <div>
+          <span class="k">Before</span>
+          <p>Environment provisioning, feature toggles, and IP restrictions routed through internal fulfillment. Weeks of latency, errors in handoff, and a support queue that grew with every client added.</p>
+        </div>
+        <div class="after">
+          <span class="k">After</span>
+          <p>Administrators configure their own environments in seconds, inside an access model that requires explicit authorization for high-stakes changes. Intapp gained a live view of active sites and their hosting cost.</p>
+        </div>
+      </div>
+
+      <h3>What discovery actually turned up</h3>
+      <p>I grounded the discovery process in direct research with security and technology officers at large-scale enterprise clients. What they told us shaped the product more than any internal assumption had.</p>
+      <p>The obvious brief for a self-service tool is to remove friction. That wasn&#8217;t the brief these customers gave. Their most critical design requirement was that the wrong person should never be able to make a high-stakes configuration change without explicit authorization. They wanted the speed, but authorization was the condition for adopting it at all. Get that ordering backwards and you ship a portal that enterprise security teams quietly decline to turn on.</p>
+
+      <h3>Decisions and tradeoffs</h3>
+
+      <div class="decision">
+        <div class="d-label">The access model was the product</div>
+        <p>I carried the research findings straight into the design, engineering, and security conversations rather than converting them into a feature list first, and worked with those teams to map the admin access models and controls. I worked out the access model first, then designed the interface around it. Deciding who may do what, and what proof is required before they do it, was the actual design work.</p>
+      </div>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 700 208" role="img" aria-label="An administrator action is assessed by scope. Routine changes execute immediately; high-stakes changes must pass explicit authorization before executing.">
+          <defs>
+            <marker id="pArrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><polygon points="0,0 8,4 0,8" fill="currentColor"/></marker>
+            <marker id="pArrowA" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><polygon points="0,0 8,4 0,8" fill="var(--accent)"/></marker>
+          </defs>
+
+          <rect x="8" y="86" width="128" height="46" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-opacity="0.4"/>
+          <text x="72" y="113" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="11" letter-spacing="0.8" fill="currentColor">ADMIN ACTION</text>
+
+          <line x1="138" y1="109" x2="170" y2="109" stroke="currentColor" stroke-opacity="0.55" marker-end="url(#pArrow)"/>
+
+          <rect x="174" y="86" width="146" height="46" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-opacity="0.4"/>
+          <text x="247" y="113" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="11" letter-spacing="0.8" fill="currentColor">SCOPE OF CHANGE</text>
+
+          <path d="M 322 103 H 330 Q 340 103 340 93 V 63 Q 340 53 350 53 H 586" fill="none" stroke="currentColor" stroke-opacity="0.55" marker-end="url(#pArrow)"/>
+          <text x="466" y="45" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" fill="currentColor" opacity="0.75">routine</text>
+
+          <path d="M 322 115 H 330 Q 340 115 340 125 V 159 Q 340 169 350 169 H 406" fill="none" stroke="var(--accent)" stroke-width="1.4" marker-end="url(#pArrowA)"/>
+          <text x="332" y="146" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" fill="var(--accent)">high-stakes</text>
+
+          <rect x="410" y="146" width="152" height="46" fill="none" stroke="var(--accent)" stroke-width="1.4"/>
+          <text x="486" y="167" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="11" letter-spacing="0.8" fill="var(--accent)">AUTHORIZATION</text>
+          <text x="486" y="182" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="9.5" fill="var(--accent)" opacity="0.85">explicit, per action</text>
+
+          <line x1="564" y1="169" x2="586" y2="169" stroke="var(--accent)" stroke-width="1.4" marker-end="url(#pArrowA)"/>
+
+          <rect x="590" y="30" width="102" height="46" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-opacity="0.4"/>
+          <text x="641" y="58" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="11" letter-spacing="0.8" fill="currentColor">EXECUTES</text>
+          <rect x="590" y="146" width="102" height="46" fill="currentColor" fill-opacity="0.05" stroke="currentColor" stroke-opacity="0.4"/>
+          <text x="641" y="174" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="11" letter-spacing="0.8" fill="currentColor">EXECUTES</text>
+        </svg>
+        <figcaption>The access model. Both paths end in the same place. The difference is one required hop. Deciding which actions belong on the lower path was the actual design work.</figcaption>
+      </figure>
+
+      <h3>Result</h3>
+      <p>Environment provisioning compressed from a weeks-long fulfillment process to seconds. Site management moved out of the support queue and into the hands of the people who actually owned the platforms.</p>
+      <p>The third outcome was the one nobody asked for. Because the portal knew which sites were active, it gave Intapp visibility into them and their associated hosting costs. That turned operational overhead that hadn&#8217;t previously been visible into something measurable and manageable.</p>
+    </section>
+
+    <!-- ===== CASE 4 ===== -->
+    <section id="datamodel">
+      <p class="eyebrow">04 &nbsp;/&nbsp; Case study</p>
+      <p class="record-meta">
+        <span>Compliance Solutions Strategies</span><span>2017&#8202;&#8211;&#8202;2021</span><span>Product Manager</span>
+      </p>
+      <h2>Six months to fix what nobody had asked about.</h2>
+
+      <ul class="facts">
+        <li><span class="k">Product</span><span class="v">The data repository behind the firm&#8217;s Shares Outstanding product</span></li>
+        <li><span class="k">Trigger</span><span class="v">Self-initiated &#8212; not assigned, not on any roadmap</span></li>
+        <li><span class="k">Problem</span><span class="v">A single, narrowly sourced figure carrying more downstream weight than its design supported</span></li>
+        <li><span class="k">Ask</span><span class="v">A six-month rearchitecture, against significant internal resistance</span></li>
+        <li><span class="k">Role</span><span class="v">Found it, built the case, stayed through delivery</span></li>
+        <li><span class="k">Outcome</span><span class="v">The corrected model became the firm&#8217;s proprietary ML data repository, later the basis of a $300K revenue line</span></li>
+      </ul>
+
+      <h3>What I found</h3>
+      <p>The existing repository produced a single figure, drawn from a narrow set of sources and refreshed infrequently. For a shares outstanding product, that figure is the denominator. Positions are measured against regulatory thresholds using it, so how it is sourced and how often it moves propagates into every percentage derived from it. The architecture had been designed for a lighter use than the one it had grown into, and the distance between those two was where the risk sat.</p>
+
+      <h3>How I found it</h3>
+      <p>Nobody assigned this. When I join a company I make a point of understanding its architecture and then walking it from a client&#8217;s point of view, looking for the distance between what the system produces and what a client is relying on it to prove. That is what surfaced this.</p>
+
+      <h3>Making the case</h3>
+      <p>The resistance came from senior technical and business stakeholders, and the objection was reasonable on its face: redesigning an architecture is expensive, and nothing was visibly broken.</p>
+      <p>So I stopped arguing about architecture and built the exhibit instead. I took a figure from the existing repository and set it beside the figure I calculated from additional data sources, then measured both against the kind of thresholds the number exists to test. The difference between them was material at exactly the point where it mattered most.</p>
+
+      <figure class="diagram">
+        <svg viewBox="0 0 700 230" role="img" aria-label="Two measurements of the same client position against a reporting threshold. The figure from the existing repository stops short of the threshold; the figure recalculated from additional sources crosses it.">
+          <!-- threshold -->
+          <text x="506" y="40" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10.5" letter-spacing="1.3" fill="currentColor">CLIENT THRESHOLD</text>
+          <line x1="506" y1="52" x2="506" y2="212" stroke="currentColor" stroke-width="1.25" stroke-dasharray="4 5" opacity="0.72"/>
+
+          <!-- lane A: existing repository -->
+          <text x="186" y="78" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="11" letter-spacing="0.9" fill="currentColor">EXISTING REPOSITORY</text>
+          <text x="186" y="95" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10.5" fill="currentColor" opacity="0.72">narrow sources, stale</text>
+          <rect x="202" y="68" width="248" height="28" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-opacity="0.4" stroke-width="1"/>
+          <text x="202" y="120" font-family="'Public Sans', sans-serif" font-size="12.5" fill="currentColor" opacity="0.8">reads as compliant</text>
+
+          <!-- lane B: recalculated -->
+          <text x="186" y="158" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="11" letter-spacing="0.9" fill="currentColor">RECALCULATED</text>
+          <text x="186" y="175" text-anchor="end" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="10.5" fill="currentColor" opacity="0.72">additional sources</text>
+          <rect x="202" y="148" width="418" height="28" fill="currentColor" fill-opacity="0.12"/>
+          <rect x="506" y="148" width="114" height="28" fill="var(--accent)" fill-opacity="0.9"/>
+          <rect x="202" y="148" width="418" height="28" fill="none" stroke="currentColor" stroke-opacity="0.4" stroke-width="1"/>
+          <text x="202" y="200" font-family="'Public Sans', sans-serif" font-size="12.5" fill="var(--accent)" font-weight="600">threshold crossed</text>
+        </svg>
+        <figcaption>The exhibit. The same client position, measured against the figure the existing repository produced and against the figure recalculated from additional sources. Two different compliance answers from one position. Schematic: shapes are illustrative, not client data.</figcaption>
+      </figure>
+      <p>That comparison ended the debate. Once the difference sat on a page next to a threshold, the question was no longer whether the rearchitecture was worth six months of engineering.</p>
+
+      <h3>Delivery</h3>
+      <p>Approval came first, from the key stakeholders, and work started only once it was in hand. The senior technical stakeholder who had led the opposition then partnered on the build directly rather than delegating it. We worked hand in hand through testing and data scraping across the migration.</p>
+
+      <h3>Result</h3>
+      <p>The rearchitecture did more than remove the risk. The corrected model became the firm&#8217;s proprietary machine learning data repository. That became the asset the legacy Shares Outstanding product was repositioned around, generating $300K in annual revenue within twelve months.</p>
+      <p>It turned out the fix and the new revenue line were the same piece of work.</p>
+    </section>
+
+    <!-- ===== AI ===== -->
+    <section id="ai">
+      <p class="eyebrow">05 &nbsp;/&nbsp; Working with AI</p>
+      <h2>AI in the workflow, not layered on top of it.</h2>
+      <p>Claude is my thinking partner for pressure-testing my own reasoning, catching gaps in requirements before they reach engineering, and synthesizing complex context fast. Four places it does real work:</p>
+
+      <div class="uses">
+        <div>
+          <h4>Product definition</h4>
+          <p>Drafting PRDs and then attacking them: what is ambiguous, what is unstated, what an engineer would otherwise have to guess. It is far cheaper to find those gaps before engineering starts than after.</p>
+        </div>
+        <div>
+          <h4>Customer research</h4>
+          <p>Synthesizing interviews, support threads, and call notes into patterns, then having the model argue against the pattern instead of confirming it. In compliance, what a customer asks for and what they actually need are often different things.</p>
+        </div>
+        <div>
+          <h4>GTM strategy</h4>
+          <p>Segmentation, positioning, pricing narratives, and competitive teardowns, with the model taking the buyer&#8217;s side of the argument so the weak parts surface before a prospect finds them.</p>
+        </div>
+        <div>
+          <h4>My own pipeline</h4>
+          <p>I run my job search on a tool I built. It pulls postings from company job boards into a local database, dedupes them, and scores each role against my background with an LLM evaluator.</p>
+        </div>
+      </div>
+
+      <h3>Tooling</h3>
+      <p>I work with skills, connectors, MCP servers, and agents, composing them into workflows rather than prompting one thing at a time. That is also how I think about building AI products: most of the hard problems live at the seams between the model, the tools it can call, and the data it is allowed to reach.</p>
+    </section>
+
+    <!-- ===== PRACTICE ===== -->
+    <section id="practice">
+      <p class="eyebrow">06 &nbsp;/&nbsp; How I work</p>
+      <h2>The problem nobody assigned me to find.</h2>
+      <p>I find the structural problem nobody assigned me to find, build the case for fixing it, and drive it through without waiting for someone to hand me the answer or the authority to act.</p>
+
+      <div class="entries" style="margin-top:22px">
+        <div class="entry">
+          <div class="entry-side">CSS<br>2017&#8202;&#8211;&#8202;2021</div>
+          <div>
+            <p>Discovered a foundational data model error that was quietly creating compliance risk for clients. Made the case for a six-month rearchitecture against real resistance, and delivered it.</p>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-side">Intapp<br>2021&#8202;&#8211;&#8202;2026</div>
+          <div>
+            <p>Mapped where 80+ engineering teams were running on manual workarounds, then built native tooling for them without a reporting line to any of them. Support tickets fell 50%.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>Making the case</h3>
+      <p>What makes that work is arguing in the language of client use cases rather than opinions. A six-month rearchitecture gets approved because someone can name the client exposure it removes, not because a product manager believes in it. Then I stay close through delivery and post-launch.</p>
+      <p>I also work directly with customers rather than through a layer, across financial services and legal, from pre-sales demos through onboarding and support. I carry the domain myself. As subject-matter expert at industry events that generated $500K in pipeline and 20+ qualified demos, because in regulated markets the person who understands the rule is the person buyers will talk to.</p>
+
+      <p class="closer">I work best in high-stakes environments where the output has to be trustworthy enough to act on, not just technically impressive.</p>
+    </section>
+
+    <!-- ===== ALSO SHIPPED ===== -->
+    <section id="also">
+      <p class="eyebrow">07 &nbsp;/&nbsp; Also shipped</p>
+      <h2>Selected additional work.</h2>
+      <div class="entries">
+
+        <div class="entry">
+          <div class="entry-side">Intapp<br>2021&#8202;&#8211;&#8202;2026</div>
+          <div>
+            <h4>LLMs in production for compliance review</h4>
+            <p>Productionized large language models for real-time risk detection, pattern recognition, and automated compliance checks across the platform, reducing manual compliance review time. Built on Azure OpenAI.</p>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-side">Intapp<br>2021&#8202;&#8211;&#8202;2026</div>
+          <div>
+            <h4>Internal tooling platform</h4>
+            <p>Built a permissioned internal platform so client-facing teams could resolve client queries themselves instead of routing every request through engineering, with access scoped by role. Engineering and support tickets fell 50%.</p>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-side">CSS<br>2017&#8202;&#8211;&#8202;2021</div>
+          <div>
+            <h4>Employee trade monitoring, 0-to-1</h4>
+            <p>Spearheaded development of a monitoring module aligned to SEC regulations, from zero to 35 new clients and $600K in ARR.</p>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-side">CSS<br>2017&#8202;&#8211;&#8202;2021</div>
+          <div>
+            <h4>Form CRS filing for the SMB segment</h4>
+            <p>Product lead for the firm's first customizable Form CRS filing solution &#8212; directed vision, roadmap, go-to-market strategy, and pricing.</p>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-side">Dataminr<br>2013&#8202;&#8211;&#8202;2016</div>
+          <div>
+            <h4>First industry-specific product</h4>
+            <p>Early-stage hire on the team that launched Dataminr's first industry-specific product, working across product, business, and client-facing teams.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== BACKGROUND ===== -->
+    <section id="background">
+      <p class="eyebrow">08 &nbsp;/&nbsp; Background</p>
+      <h2>Craft and credentials.</h2>
+      <div class="cols">
+        <div>
+          <h3 style="margin-top:0">Product</h3>
+          <p>0-to-1 launches &#183; AI/ML productization &#183; Data analysis &amp; management &#183; GTM strategy &#183; Roadmap planning &#183; User research</p>
+        </div>
+        <div>
+          <h3 style="margin-top:0">Tools</h3>
+          <p>Azure OpenAI &#183; SQL &#183; Tableau &#183; Jira &#183; Aha! &#183; Asana &#183; Confluence &#183; Figma &#183; Grafana &#183; Smartsheet</p>
+        </div>
+        <div>
+          <h3 style="margin-top:0">Education</h3>
+          <p>Reed College &#8212; B.A. Economics<br><span style="color:var(--ink-3)">Thesis: a Tobit model of game-day attendance across 1,786 NFL regular-season games (2003&#8211;2010), using point spreads and favored-team win probability as measures of outcome uncertainty.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>Selorm Fefeti &nbsp;&#183;&nbsp; Product Manager &nbsp;&#183;&nbsp; New York, NY</span>
+      <span><a href="mailto:selormfefeti@gmail.com">selormfefeti@gmail.com</a></span>
+    </footer>
+
+  </main>
+</div>
+</body>
+</html>
